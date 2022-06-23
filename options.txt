@@ -2,8 +2,8 @@
 -DCCI
 -D_IDA_XL
 -DWINNT
--IC:\Users\Гульнара\Desktop\Версии LR 12.55, 12.63, WebTours\Work\WebHttpHtml1
+-IC:\Users\Гульнара\Desktop\Версии LR 12.55, 12.63, WebTours\Work\WebHttpHtml3
 -IC:\Program Files (x86)\Micro Focus\LoadRunner\include
--ec:\users\гульнара\desktop\версии lr 12.55, 12.63, webtours\work\webhttphtml1\\logfile.log
-c:\users\гульнара\desktop\версии lr 12.55, 12.63, webtours\work\webhttphtml1\\combined_WebHttpHtml1.c
-c:\users\гульнара\desktop\версии lr 12.55, 12.63, webtours\work\webhttphtml1\\pre_cci.c
+-ec:\users\гульнара\desktop\версии lr 12.55, 12.63, webtours\work\webhttphtml3\\logfile.log
+c:\users\гульнара\desktop\версии lr 12.55, 12.63, webtours\work\webhttphtml3\\combined_WebHttpHtml3.c
+c:\users\гульнара\desktop\версии lr 12.55, 12.63, webtours\work\webhttphtml3\\pre_cci.c
