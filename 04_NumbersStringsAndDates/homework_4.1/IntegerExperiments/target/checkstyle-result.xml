@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="8.29">
+<file name="C:\Users\itmaster\IdeaProjects\Skillbox\java_basics\04_NumbersStringsAndDates\homework_4.1\IntegerExperiments\src\main\java\CharToInt.java">
+</file>
+<file name="C:\Users\itmaster\IdeaProjects\Skillbox\java_basics\04_NumbersStringsAndDates\homework_4.1\IntegerExperiments\src\main\java\Container.java">
+</file>
+<file name="C:\Users\itmaster\IdeaProjects\Skillbox\java_basics\04_NumbersStringsAndDates\homework_4.1\IntegerExperiments\src\main\java\Main.java">
+<error line="16" severity="warning" message="тело &apos;for&apos; должно быть заключено в &apos;{}&apos;" source="com.puppycrawl.tools.checkstyle.checks.blocks.NeedBracesCheck"/>
+</file>
+</checkstyle>
