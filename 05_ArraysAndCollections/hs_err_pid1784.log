@@ -1,0 +1,220 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 368656 bytes for Chunk::new
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (./open/src/hotspot/share/memory/arena.cpp:195), pid=1784, tid=9604
+#
+# JRE version:  (14.0.2+12) (build )
+# Java VM: OpenJDK 64-Bit Server VM (14.0.2+12-46, mixed mode, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2\lib\idea_rt.jar=51605:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2\bin -Dfile.encoding=UTF-8 Main
+
+Host: AMD A8-9600 RADEON R7, 10 COMPUTE CORES 4C+6G  , 4 cores, 6G,  Windows 7 , 64 bit Build 7601 (6.1.7601.24499)
+Time: Tue Dec  8 11:37:27 2020 RTZ 2 (ceia) elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000002fb800):  JavaThread "Unknown thread" [_thread_in_vm, id=9604, stack(0x00000000022e0000,0x00000000023e0000)]
+
+Stack: [0x00000000022e0000,0x00000000023e0000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x5f8a9a]
+V  [jvm.dll+0x74247a]
+V  [jvm.dll+0x743c2f]
+V  [jvm.dll+0x744273]
+V  [jvm.dll+0x20d288]
+V  [jvm.dll+0xabb07]
+V  [jvm.dll+0xab833]
+V  [jvm.dll+0x6c17e8]
+V  [jvm.dll+0x5a819f]
+V  [jvm.dll+0x71feae]
+V  [jvm.dll+0x321c14]
+V  [jvm.dll+0x70112c]
+V  [jvm.dll+0x392def]
+V  [jvm.dll+0x394e61]
+C  [jli.dll+0x524b]
+C  [ucrtbase.DLL+0x203ba]
+C  [kernel32.dll+0x1556d]
+C  [ntdll.dll+0x5385d]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x000007fee0c93038, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x000000000033b800 GCTaskThread "GC Thread#0" [stack: 0x000000001e650000,0x000000001e750000] [id=4916]
+  0x000000000034d000 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000001e920000,0x000000001ea20000] [id=8320]
+  0x000000000034f000 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000001e780000,0x000000001e880000] [id=6948]
+  0x0000000020eaf800 ConcurrentGCThread "G1 Refine#0" [stack: 0x00000000210c0000,0x00000000211c0000] [id=6124]
+  0x0000000020eb1800 ConcurrentGCThread "G1 Young RemSet Sampling" [stack: 0x0000000021220000,0x0000000021320000] [id=3548]
+
+=>0x00000000002fb800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=9604, stack(0x00000000022e0000,0x00000000023e0000)]
+
+Threads with active compile tasks:
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x0000000090c00000, size: 1780 MB, Compressed Oops mode: 32-bit
+Narrow klass base: 0x0000000800000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x0000000800b30000
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (2 events):
+Event: 0.012 Loaded shared library C:\Users\itmaster\.jdks\openjdk-14.0.2\bin\java.dll
+Event: 0.013 Loaded shared library C:\Users\itmaster\.jdks\openjdk-14.0.2\bin\zip.dll
+
+
+Dynamic libraries:
+0x000000013f510000 - 0x000000013f51d000 	C:\Users\itmaster\.jdks\openjdk-14.0.2\bin\java.exe
+0x0000000076d30000 - 0x0000000076ecf000 	C:\Windows\SYSTEM32\ntdll.dll
+0x000007fef1d80000 - 0x000007fef1d92000 	C:\Program Files\AVAST Software\Avast\aswhook.dll
+0x0000000076b10000 - 0x0000000076c2f000 	C:\Windows\system32\kernel32.dll
+0x000007fefc8a0000 - 0x000007fefc907000 	C:\Windows\system32\KERNELBASE.dll
+0x000007fef4a10000 - 0x000007fef4a28000 	C:\Users\itmaster\.jdks\openjdk-14.0.2\bin\jli.dll
+0x000007fefb3f0000 - 0x000007fefb5e5000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.24483_none_e372d88f30fbb845\COMCTL32.dll
+0x000007fefd340000 - 0x000007fefd3df000 	C:\Windows\system32\msvcrt.dll
+0x000007fefda30000 - 0x000007fefda97000 	C:\Windows\system32\GDI32.dll
+0x0000000076c30000 - 0x0000000076d2a000 	C:\Windows\system32\USER32.dll
+0x000007fefda20000 - 0x000007fefda2e000 	C:\Windows\system32\LPK.dll
+0x000007fefcdc0000 - 0x000007fefce8b000 	C:\Windows\system32\USP10.dll
+0x000007fefd6d0000 - 0x000007fefd741000 	C:\Windows\system32\SHLWAPI.dll
+0x000007fef49f0000 - 0x000007fef4a05000 	C:\Users\itmaster\.jdks\openjdk-14.0.2\bin\VCRUNTIME140.dll
+0x000007fef4d10000 - 0x000007fef4d14000 	C:\Users\itmaster\.jdks\openjdk-14.0.2\bin\api-ms-win-crt-runtime-l1-1-0.dll
+0x000007feebf80000 - 0x000007feec07c000 	C:\Users\itmaster\.jdks\openjdk-14.0.2\bin\ucrtbase.DLL
+0x000007fef4cf0000 - 0x000007fef4cf3000 	C:\Users\itmaster\.jdks\openjdk-14.0.2\bin\api-ms-win-core-localization-l1-2-0.dll
+0x000007fef4720000 - 0x000007fef4723000 	C:\Users\itmaster\.jdks\openjdk-14.0.2\bin\api-ms-win-core-processthreads-l1-1-1.dll
+0x000007fef4710000 - 0x000007fef4713000 	C:\Users\itmaster\.jdks\openjdk-14.0.2\bin\api-ms-win-core-file-l1-2-0.dll
+0x000007fef4700000 - 0x000007fef4703000 	C:\Users\itmaster\.jdks\openjdk-14.0.2\bin\api-ms-win-core-timezone-l1-1-0.dll
+0x000007fef46f0000 - 0x000007fef46f3000 	C:\Users\itmaster\.jdks\openjdk-14.0.2\bin\api-ms-win-core-file-l2-1-0.dll
+0x000007fef46e0000 - 0x000007fef46e3000 	C:\Users\itmaster\.jdks\openjdk-14.0.2\bin\api-ms-win-core-synch-l1-2-0.dll
+0x000007fef46d0000 - 0x000007fef46d3000 	C:\Users\itmaster\.jdks\openjdk-14.0.2\bin\api-ms-win-crt-heap-l1-1-0.dll
+0x000007fef46a0000 - 0x000007fef46a4000 	C:\Users\itmaster\.jdks\openjdk-14.0.2\bin\api-ms-win-crt-string-l1-1-0.dll
+0x000007fef2d40000 - 0x000007fef2d44000 	C:\Users\itmaster\.jdks\openjdk-14.0.2\bin\api-ms-win-crt-stdio-l1-1-0.dll
+0x000007fef2b10000 - 0x000007fef2b14000 	C:\Users\itmaster\.jdks\openjdk-14.0.2\bin\api-ms-win-crt-convert-l1-1-0.dll
+0x000007fef2b00000 - 0x000007fef2b03000 	C:\Users\itmaster\.jdks\openjdk-14.0.2\bin\api-ms-win-crt-environment-l1-1-0.dll
+0x000007fef2a10000 - 0x000007fef2a13000 	C:\Users\itmaster\.jdks\openjdk-14.0.2\bin\api-ms-win-crt-filesystem-l1-1-0.dll
+0x000007fef2990000 - 0x000007fef2995000 	C:\Users\itmaster\.jdks\openjdk-14.0.2\bin\api-ms-win-crt-math-l1-1-0.dll
+0x000007fef2980000 - 0x000007fef2983000 	C:\Users\itmaster\.jdks\openjdk-14.0.2\bin\api-ms-win-crt-locale-l1-1-0.dll
+0x000007fefdd00000 - 0x000007fefdd2e000 	C:\Windows\system32\IMM32.DLL
+0x000007fefcc90000 - 0x000007fefcd99000 	C:\Windows\system32\MSCTF.dll
+0x000007feedcb0000 - 0x000007feedd4b000 	C:\Users\itmaster\.jdks\openjdk-14.0.2\bin\msvcp140.dll
+0x000007fef2890000 - 0x000007fef2893000 	C:\Users\itmaster\.jdks\openjdk-14.0.2\bin\api-ms-win-crt-time-l1-1-0.dll
+0x000007fef25a0000 - 0x000007fef25a3000 	C:\Users\itmaster\.jdks\openjdk-14.0.2\bin\api-ms-win-crt-utility-l1-1-0.dll
+0x000007fee0210000 - 0x000007fee0d2e000 	C:\Users\itmaster\.jdks\openjdk-14.0.2\bin\server\jvm.dll
+0x000007fefdbc0000 - 0x000007fefdc9b000 	C:\Windows\system32\ADVAPI32.dll
+0x000007fefd520000 - 0x000007fefd53f000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007fefd3f0000 - 0x000007fefd51c000 	C:\Windows\system32\RPCRT4.dll
+0x000007fef9390000 - 0x000007fef9399000 	C:\Windows\system32\WSOCK32.dll
+0x000007fefcc40000 - 0x000007fefcc8d000 	C:\Windows\system32\WS2_32.dll
+0x000007fefd3e0000 - 0x000007fefd3e8000 	C:\Windows\system32\NSI.dll
+0x000007fefa360000 - 0x000007fefa39b000 	C:\Windows\system32\WINMM.dll
+0x000007fefb910000 - 0x000007fefb91c000 	C:\Windows\system32\VERSION.dll
+0x0000000076ed0000 - 0x0000000076ed7000 	C:\Windows\system32\PSAPI.DLL
+0x000007fef2510000 - 0x000007fef251a000 	C:\Users\itmaster\.jdks\openjdk-14.0.2\bin\jimage.dll
+0x000007fef8270000 - 0x000007fef8395000 	C:\Windows\system32\DBGHELP.DLL
+0x000007fef24d0000 - 0x000007fef24de000 	C:\Users\itmaster\.jdks\openjdk-14.0.2\bin\instrument.dll
+0x000007fef24e0000 - 0x000007fef2505000 	C:\Users\itmaster\.jdks\openjdk-14.0.2\bin\java.dll
+0x000007fef1a60000 - 0x000007fef1a76000 	C:\Users\itmaster\.jdks\openjdk-14.0.2\bin\zip.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\itmaster\.jdks\openjdk-14.0.2\bin;C:\Windows\SYSTEM32;C:\Program Files\AVAST Software\Avast;C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.24483_none_e372d88f30fbb845;C:\Users\itmaster\.jdks\openjdk-14.0.2\bin\server
+
+VM Arguments:
+jvm_args: -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2\lib\idea_rt.jar=51605:C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2\bin -Dfile.encoding=UTF-8 
+java_command: Main
+java_class_path (initial): C:\Users\itmaster\IdeaProjects\Skillbox\java_basics\05_ArraysAndCollections\homework_5.1\ReverseArray\target\classes;C:\Users\itmaster\.m2\repository\com\puppycrawl\tools\checkstyle\8.34\checkstyle-8.34.jar;C:\Users\itmaster\.m2\repository\info\picocli\picocli\4.3.2\picocli-4.3.2.jar;C:\Users\itmaster\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\itmaster\.m2\repository\org\antlr\antlr4-runtime\4.8-1\antlr4-runtime-4.8-1.jar;C:\Users\itmaster\.m2\repository\commons-beanutils\commons-beanutils\1.9.4\commons-beanutils-1.9.4.jar;C:\Users\itmaster\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\itmaster\.m2\repository\commons-collections\commons-collections\3.2.2\commons-collections-3.2.2.jar;C:\Users\itmaster\.m2\repository\com\google\guava\guava\29.0-jre\guava-29.0-jre.jar;C:\Users\itmaster\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\itmaster\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\itmaster\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\itmaster\.m2\repository\org\checkerframework\checker-qual\2.11.1\checker-qual-2.11.1.jar;C:\Users\itmaster\.m2\repository\com\google\errorprone\error_prone_annotations\2.3.4\error_prone_annotations-2.3.4.jar;C:\Users\itmaster\.m2\repository\com\google\j2objc\j2objc-annotations\1.3\j2objc-annotations-1.3.jar;C:\Users\itmaster\.m2\repository\net\sf\saxon\Saxon-HE\9.9.1-7\Saxon-HE-9.9.1-7.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 117440512                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 1866465280                                {product} {ergonomic}
+   size_t MaxNewSize                               = 1119879168                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5832780                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122912730                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122912730                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 1866465280                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-11.0.8
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Java\jdk-11.0.8;C:\Program Files\Git\cmd;C:\Program Files\Common Files\Autodesk Shared\;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files\nodejs\;C:\Program Files\Bandizip\7z;C:\Users\Rikcon\AppData\Roaming\npm;C:\adb;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\HashiCorp\Vagrant\bin;C:\Go\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Livestreamer;C:\Program Files (x86)\Git\cmd;C:\Program Files (x86)\Git\bin;C:\Python34\Scripts;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\
+USERNAME=itmaster
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 21 Model 101 Stepping 1, AuthenticAMD
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 (6.1.7601.24499)
+OS uptime: 0 days 3:35 hours
+
+CPU:total 4 (initial active 4) (4 cores per cpu, 1 threads per core) family 21 model 101 stepping 1, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, mmxext, 3dnowpref, lzcnt, sse4a, tsc, tscinvbit, tscinv, bmi1, bmi2, fma
+
+Memory: 4k page, system-wide physical 7119M (1249M free)
+TotalPageFile size 8141M (AvailPageFile size 190M)
+current process WorkingSet (physical memory assigned to process): 13M, peak: 13M
+current process commit charge ("private bytes"): 188M, peak: 188M
+
+vm_info: OpenJDK 64-Bit Server VM (14.0.2+12-46) for windows-amd64 JRE (14.0.2+12-46), built on Jul  9 2020 00:31:16 by "mach5one" with MS VC++ 15.9 (VS2017)
+
+END.
